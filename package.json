@@ -1,0 +1,22 @@
+{
+  "name": "sinonjs_demo",
+  "version": "1.0.0",
+  "description": "Simple demo of SinonJs",
+  "main": "index.js",
+  "scripts": {
+    "compile": "coffee --bare --map --output server --compile coffeeServer && coffee --bare --map --output test --compile coffeeTest",
+    "pretest": "npm install",
+    "test": "npm run compile && mocha --recursive --timeout 30000 test"
+  },
+  "author": "Ying Tang",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "coffee-script": "^1.8.0",
+    "mocha": "^2.1.0",
+    "sinon": "^1.12.2"
+  },
+  "dependencies": {
+    "redis": "^0.12.1"
+  }
+}
